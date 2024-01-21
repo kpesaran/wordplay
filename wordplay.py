@@ -1,9 +1,14 @@
+
+
+
 #Setting up all the words in a list 
 with open('sowpods.txt', 'r') as scrabble_words:
     words = []
     for word in scrabble_words:
         words.append(word.strip())
 
+#variables used in multiple questions 
+vowels = "AEIOU"
 
 #Question: 
 #What are all of the words containing UU?
@@ -88,23 +93,25 @@ for word in words:
 
 #Question: 
 # What are all of the words that have all 5 vowels, in any order?
-vowels = "AEIOU"
+
 words_with_all_vowels = [] 
 for word in words: 
-    vowel_in_word = True
+    word_contains_all_vowels = True
     for char in vowels:
         if char not in word:
-            vowel_in_word = False
+            word_contains_all_vowels = False
             break
-    if vowel_in_word:
+    if word_contains_all_vowels:
         words_with_all_vowels.append(word)
+
+    
 # To Display Answer
 # print(words_with_all_vowels)
 
 #Question: 
 # What are all of the words that have all 5 vowels, in alphabetical order? 
 words_with_alphabetical_vowels = []
-vowels = "AEIOU"
+
 
 for word in words:
     word_index = 0
@@ -130,10 +137,10 @@ for word in words:
 
 #Question: 
 #Create and print an array containing all of the words that end in "GHTLY"
-end_in_GHTYL = []
+end_in_GHTLY = []
 for word in words:
     if word[-5:] ==  "GHTLY":
-         end_in_GHTYL.append(word)
+         end_in_GHTLY.append(word)
 #To display all the words
 #print(end_in_GHTYL)
 
@@ -151,7 +158,7 @@ for word in words_with_all_vowels:
 
 #What is the longest word that contains no vowels? Assumes Y is allowed. 
 
-vowels = "AEIOU"
+
 words_no_vowels = []
 for word in words:
     vowel_in_word = False
@@ -186,28 +193,12 @@ for word in words:
         if "Z" == char:
             letter_Z_count += 1
 #To Display Answer: 
-# if letter_Q_count and letter_X_count > letter_Z_count:
+# if letter_Q_count > letter_Z_count and letter_X_count > letter_Z_count:
 #     print('letter Z count:', letter_Z_count)
-# elif letter_Z_count and letter_X_count > letter_Q_count:
+# elif letter_Z_count > letter_Q_count and letter_X_count > letter_Q_count:
 #     print('letter Q count:', letter_Q_count)
 # else:
 #     print('letter X count:', letter_X_count)
-
-#  Question: answered same question as above but used dictionary
-dic = {"X":0, "Q":0, "Z":0}
-for word in words:
-    for char in word:
-        if char in dic:
-            dic[char] += 1
-min_letter = ""
-min_count = float('inf')  
-for letter , count in dic.items():
-    print(letter, count)
-    if count < min_count:
-        min_letter = letter
-        min_count = count
-# to display answer
-#print(f"letter {min_letter} count: {min_count}")
 
 
 #Question

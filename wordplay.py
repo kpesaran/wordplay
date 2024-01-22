@@ -7,8 +7,12 @@ with open('sowpods.txt', 'r') as scrabble_words:
     for word in scrabble_words:
         words.append(word.strip())
 
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+vowels_And_Y = "AEIOUY"
 #variables used in multiple questions 
 vowels = "AEIOU"
+
+
 
 #Question: 
 #What are all of the words containing UU?
@@ -77,7 +81,7 @@ for word in words:
 
 #Question: 
 #What are all of the words with no vowel and not even a Y?
-vowelsAndY = "AEIOUY"
+
 
 words_no_vowels_includingY = []
 for word in words:
@@ -222,7 +226,7 @@ for word in palindrome_list:
 # Question: 
 # What are all of the letters that never appear consecutively in an English word? For example, we know that “U” isn’t an answer, because of the word VACUUM, and we know that “A” isn’t an answer, because of “AARDVARK”, but which letters never appear consecutively?
 
-alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
 
 for word in words:  
     word_index = 0

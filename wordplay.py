@@ -8,7 +8,7 @@ with open('sowpods.txt', 'r') as scrabble_words:
         words.append(word.strip())
 
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-vowels_And_Y = "AEIOUY"
+vowels_and_Y = "AEIOUY"
 #variables used in multiple questions 
 vowels = "AEIOU"
 

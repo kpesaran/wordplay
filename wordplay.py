@@ -1,6 +1,5 @@
 
 
-
 #Setting up all the words in a list 
 with open('sowpods.txt', 'r') as scrabble_words:
     words = []
@@ -11,7 +10,6 @@ alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 vowels_and_Y = "AEIOUY"
 #variables used in multiple questions 
 vowels = "AEIOU"
-
 
 
 #Question: 

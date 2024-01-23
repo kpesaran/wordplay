@@ -1,5 +1,3 @@
-
-
 #Setting up all the words in a list 
 with open('sowpods.txt', 'r') as scrabble_words:
     words = []
@@ -8,12 +6,12 @@ with open('sowpods.txt', 'r') as scrabble_words:
 
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 vowels_and_Y = "AEIOUY"
-#variables used in multiple questions 
+#used in multiple questions 
 vowels = "AEIOU"
-
 
 #Question: 
 #What are all of the words containing UU?
+
 words_with_UU = []
 for word in words:
     if 'UU' in word:
@@ -24,6 +22,7 @@ for word in words:
 
 #Question: 
 #What are all of the words containing an X and a Y and a Z
+        
 words_with_X_Y_Z = []
 for word in words:
     if "X" in word and "Y" in word and "Z" in word:
@@ -33,6 +32,7 @@ for word in words:
 
 #Question: 
 #What are all the words containing a Q but not a U
+       
 words_with_Q_not_U = []
 for word in words:
     if "Q" in word and "U" not in word:
@@ -61,6 +61,7 @@ for word in words:
         
 #Question: 
 #What are all of the words that have a B and an X and are less than 5 letters long?
+            
 words_B_X_5less = []
 for word in words:
     if len(word) < 5 and "B" in word and "X" in word:
@@ -70,6 +71,7 @@ for word in words:
 
 #Question: 
 #What are all of the words that both start and end with Y?
+        
 words_startY_endY = []
 for word in words: 
     if word[0] == "Y" and word[-1] == "Y":
@@ -79,7 +81,6 @@ for word in words:
 
 #Question: 
 #What are all of the words with no vowel and not even a Y?
-
 
 words_no_vowels_includingY = []
 for word in words:
@@ -112,9 +113,8 @@ for word in words:
 
 #Question: 
 # What are all of the words that have all 5 vowels, in alphabetical order? 
+
 words_with_alphabetical_vowels = []
-
-
 for word in words:
     word_index = 0
     vowel_index = 0
@@ -137,6 +137,7 @@ for word in words:
 # To display an answer
 # print(type_count)
 
+
 #Question: 
 #Create and print an array containing all of the words that end in "GHTLY"
 end_in_GHTLY = []
@@ -145,6 +146,7 @@ for word in words:
          end_in_GHTLY.append(word)
 #To display all the words
 #print(end_in_GHTYL)
+
 
 #Question:
 #What is the shortest word that contains all 5 vowels?
@@ -157,9 +159,7 @@ for word in words_with_all_vowels:
 #print(shortest_word)
 
 
-
 #What is the longest word that contains no vowels? Assumes Y is allowed. 
-
 
 words_no_vowels = []
 for word in words:
@@ -220,11 +220,8 @@ for word in palindrome_list:
 # print(palindrome_word)
 
 
-
 # Question: 
 # What are all of the letters that never appear consecutively in an English word? For example, we know that “U” isn’t an answer, because of the word VACUUM, and we know that “A” isn’t an answer, because of “AARDVARK”, but which letters never appear consecutively?
-
-
 
 for word in words:  
     word_index = 0

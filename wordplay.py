@@ -85,7 +85,7 @@ for word in words:
 words_no_vowels_includingY = []
 for word in words:
     vowel_in_word = False
-    for char in vowelsAndY:
+    for char in vowels_and_Y:
         if char in word:
             vowel_in_word = True
             break 
